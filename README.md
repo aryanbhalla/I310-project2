@@ -29,4 +29,24 @@ Before importing the data frame into the Jupyter Notebook and performing an anal
 **    **HYPOTHESIS TESTING****
 Based on the above findings, the pearson correlation between scores and parameters, as well as the mean toxicity score, which was 0.24, the threshold established above which scores were considered toxic was 0.4. When the relationshi between character length and toxicity score was plotted, it was discovered that toxicity scores started trending downward. This led to the hypthosesi discussed:
 As character length increases, the toxicity score tends to decrease.
-In order to test this hypothesis, a linear regression was run with string length as the explantory and score as the response variables respectively. The resulting line of best fit was a horizontal line through data which led to not many outliers. The graph, found in the notebook, 
+In order to test this hypothesis, a linear regression was run with string length as the explantory and score as the response variables respectively. The resulting line of best fit was a horizontal line through data which led to not many outliers. The graph, found in the notebook, can also be seen below:
+
+
+
+![image](https://user-images.githubusercontent.com/99366030/157987377-96227e83-58d1-444d-b594-3f427812307c.png)
+
+However, to verify the results, a dummy regression was run. However, the dummy variable returned a line of best fit much more different than the one found in the initial set of variables:
+
+
+![image](https://user-images.githubusercontent.com/99366030/157987624-42801124-4582-4799-a2be-8db5bb02e0b3.png)
+
+This revealed no concrete relationship betweem character length and toxicity score.
+
+
+**RESULTS**
+The hypothesis test found that there was no linear relationship between character length and toxicity score. The line of best fit was horizontal and the dummy regression did not match up with the original. The best estimate is the toxicity score is dispersed all around the probability range, and has nothing to do with character length, thus disproving the hypothesis.
+
+The theory I have as to why the result turned out this way was that I assumed looking at the correlation between parameters and through data parsing that there was some relationship between character length and variables, which turned out to be ill founded. The hypothesis test revelaed the bias and disproved my findings. For more accuracy, the entire toxicity score column was used as a subset of the entire data.
+
+**CONCLUSION**
+In summation, there was bias found in the data. I felt as though some labels were misrepresented, and that bias in the model existed due to the algorithm feeding off comments from limited sources. The hypothesis of lesser toxicity scores with longer comments was disproven, and the degree of bias that exists in the data is subjective, varying from person to person.
